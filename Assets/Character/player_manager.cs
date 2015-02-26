@@ -13,7 +13,7 @@ public class player_manager : MonoBehaviour {
 	void Update () {
         if(Input.GetButton("Horizontal"))
         {
-            transform.Translate(new Vector3(speed * Input.GetAxis("Horizontal"), 0, 0) * Time.deltaTime);
+            transform.Translate(new Vector3(0, 0, speed * Input.GetAxis("Horizontal")) * Time.deltaTime);
 
         }
         if (Input.GetButtonDown("Vertical") && ( -2 < rigidbody.position.z + Mathf.Sign(Input.GetAxis("Vertical")))  && ( 2 > rigidbody.position.z + Mathf.Sign(Input.GetAxis("Vertical"))))
