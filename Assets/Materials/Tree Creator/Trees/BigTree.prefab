@@ -459,7 +459,7 @@ MonoBehaviour:
     rootSpread: 6.46999979
     groundOffset: 0
     rootMatrix:
-      e00: -1.19209275e-07
+      e00: -1.19209268e-07
       e01: 0
       e02: -1
       e03: 0
@@ -1302,7 +1302,7 @@ MonoBehaviour:
     pitch: -0
     rotation: {x: 0, y: 0, z: 0, w: 1}
     matrix:
-      e00: -1.19209275e-07
+      e00: -1.19209268e-07
       e01: 0
       e02: -1
       e03: 0
