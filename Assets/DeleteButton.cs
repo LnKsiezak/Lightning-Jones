@@ -5,7 +5,8 @@ public class DeleteButton : MonoBehaviour
 {
 
     bool enable = true;
-    Rect button1 = new Rect(350, 200, 150, 70);
+    Rect button1 = new Rect(250, 150, 150, 70);
+
 
     void OnGUI()
     {
