@@ -63,9 +63,9 @@ public class player_manager : MonoBehaviour {
         }
 
 
-        transform.position = new Vector3(Mathf.Lerp(previous_pos.x, current_pos, speed*Time.deltaTime),transform.position.y,transform.position.z);
+        rigidbody.position = new Vector3(Mathf.Lerp(previous_pos.x, current_pos, speed*Time.deltaTime),transform.position.y,transform.position.z);
 
-        previous_pos = transform.position;
+        previous_pos = rigidbody.position;
 	}
     void OnCollisionStay ()
     {
