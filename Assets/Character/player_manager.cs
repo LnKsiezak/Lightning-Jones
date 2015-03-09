@@ -56,8 +56,10 @@ public class player_manager : MonoBehaviour {
         }
         if(Input.GetButton("Jump")&& onground)
         {
-            rigidbody.AddForce(Vector3.up * jump_force,ForceMode.Impulse);
-          //  transform.Translate(Vector3.up * Time.deltaTime);
+            //rigidbody.AddForce(Vector3.up * jump_force,ForceMode.Impulse);
+           //transform.Translate(Vector3.up * Time.deltaTime*);
+            rigidbody.velocity += Vector3.up * jump_force;
+
         }
 
 
@@ -65,7 +67,7 @@ public class player_manager : MonoBehaviour {
 
         previous_pos = transform.position;
 	}
-    void OnCollisionEnter ()
+    void OnCollisionStay ()
     {
         onground = true;
     }
