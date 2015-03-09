@@ -13,7 +13,7 @@ SceneSettings:
 --- !u!104 &2
 RenderSettings:
   m_Fog: 1
-  m_FogColor: {r: .448529422, g: .448529422, b: .448529422, a: 1}
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
   m_FogDensity: .0599999987
   m_LinearFogStart: 0
@@ -1264,6 +1264,18 @@ Prefab:
     - target: {fileID: 400002, guid: 3337f095654bfce4786d5e3433ed2e3a, type: 2}
       propertyPath: m_RootOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: 3337f095654bfce4786d5e3433ed2e3a, type: 2}
+      propertyPath: m_Color.r
+      value: .676470578
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: 3337f095654bfce4786d5e3433ed2e3a, type: 2}
+      propertyPath: m_Color.g
+      value: .676470578
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: 3337f095654bfce4786d5e3433ed2e3a, type: 2}
+      propertyPath: m_Color.b
+      value: .676470578
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3337f095654bfce4786d5e3433ed2e3a, type: 2}
@@ -6155,6 +6167,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -8813,7 +8826,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 0
-  m_Color: {r: .492647052, g: .492647052, b: .492647052, a: 1}
+  m_Color: {r: .676470578, g: .676470578, b: .676470578, a: 1}
   m_Intensity: .389999986
   m_Range: 272.708801
   m_SpotAngle: 37.4196396
