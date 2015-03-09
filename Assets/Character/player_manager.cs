@@ -30,7 +30,7 @@ public class player_manager : MonoBehaviour {
        // }
         if(Input.GetButtonDown("Vertical"))
         {
-            if(Mathf.Sign(Input.GetAxis("Vertical"))==-1)
+            if(Mathf.Sign(Input.GetAxis("Vertical"))==-1 & !(Physics.Raycast(previous_pos, new Vector3(1,0,0),1)))
             {
                 if(current_pos==middle_lane)
                 {
@@ -41,7 +41,7 @@ public class player_manager : MonoBehaviour {
                     current_pos = middle_lane;
                 }
             }
-            else if (Mathf.Sign(Input.GetAxis("Vertical"))==1)
+            else if (Mathf.Sign(Input.GetAxis("Vertical"))==1 & !(Physics.Raycast(previous_pos, new Vector3(-1,0,0),1)))
             {
                 if(current_pos == right_lane)
                 {
