@@ -10,14 +10,22 @@ public class player_manager : MonoBehaviour {
 
     private Vector3  previous_pos = new Vector3();
     private float current_pos;
+    private Vector3 default_pos;
 	// Use this for initialization
 	void Start () {
         previous_pos = transform.position;
         current_pos = transform.position.x;
+        default_pos = transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(Input.GetKey("r"))
+        {
+            transform.position = default_pos;
+        }
+
         if(Input.GetButton("Horizontal"))
         {
             transform.Translate(new Vector3(0, 0, speed * Mathf.Sign(Input.GetAxis("Horizontal"))) * Time.deltaTime);
