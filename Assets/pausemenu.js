@@ -29,7 +29,7 @@ Application.Quit ();
 }
 
 function ExitMenu(){
-Application.LoadLevel("main-menu");
+Application.LoadLevel("mainmenufinal");
 pauseCanvas.enabled = false;
 Time.timeScale = 1;
 }
