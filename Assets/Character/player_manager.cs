@@ -54,19 +54,23 @@ public class player_manager : MonoBehaviour {
             }
            // transform.position = new Vector3(current_pos, transform.position.y, transform.position.z);
         }
-        if(Input.GetButton("Jump")&& onground)
-        {
-            //rigidbody.AddForce(Vector3.up * jump_force,ForceMode.Impulse);
-           //transform.Translate(Vector3.up * Time.deltaTime*);
-            rigidbody.velocity += Vector3.up * jump_force;
-
-        }
+        
 
 
         rigidbody.position = new Vector3(Mathf.Lerp(previous_pos.x, current_pos, speed*Time.deltaTime),transform.position.y,transform.position.z);
 
         previous_pos = rigidbody.position;
 	}
+    void FixedUpdate()
+    {
+        if (Input.GetButton("Jump") && onground)
+        {
+            //rigidbody.AddForce(Vector3.up * jump_force,ForceMode.Impulse);
+            //transform.Translate(Vector3.up * Time.deltaTime*);
+            rigidbody.velocity += Vector3.up * jump_force;
+
+        }
+    }
     void OnCollisionStay ()
     {
         onground = true;
