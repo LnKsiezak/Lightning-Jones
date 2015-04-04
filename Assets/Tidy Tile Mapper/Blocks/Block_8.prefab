@@ -119,7 +119,7 @@ MonoBehaviour:
     rootObject: {fileID: 100000}
     currentBlockIndex: 0
     blockSet:
-    - {fileID: 100000, guid: b8c9d774d194c4327a2552d5a384fd11, type: 2}
+    - {fileID: 100000, guid: 8d8a7150b595f4faba758ee93ff95b4f, type: 2}
     currentObject: {fileID: 0}
     offset: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0}
