@@ -3,14 +3,13 @@ using System.Collections;
 
 public class Moving_x : MonoBehaviour 
 {	
-	public float speed = 1.0F;
-	public float left_limit = 0.0F;
-	public float right_limit = 1.0F;
+	public float speed;
+	public float left_limit;
+	public float right_limit;
 	private bool go_right = true;
 	// Update is called once per frame
 	void Update () 
 	{
-		float movement = speed * Time.deltaTime;
 		if ((transform.position.x <= left_limit) || (transform.position.x >= right_limit)) 
 		{
 			if(transform.position.x <= left_limit)
@@ -24,11 +23,13 @@ public class Moving_x : MonoBehaviour
 		}
 		if (go_right) 
 		{
-			transform.Translate (new Vector3(movement,0.0F,0.0F));
+			transform.Translate (new Vector3(speed,0.0F,0.0F));
+			go_right = true;
 		} 
 		else 
 		{
-			transform.Translate(new Vector3(-movement,0.0F,0.0F));
+			transform.Translate(new Vector3(-speed,0.0F,0.0F));
+			go_right = false;
 		}
 
 	}
