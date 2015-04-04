@@ -13,6 +13,7 @@ public class player_manager : MonoBehaviour {
     private Vector3 default_pos;
 	// Use this for initialization
 	void Start () {
+        Time.timeScale = 1;
         previous_pos = transform.position;
         current_pos = transform.position.x;
         default_pos = transform.position;
@@ -28,7 +29,7 @@ public class player_manager : MonoBehaviour {
 
         if(Input.GetButton("Horizontal"))
         {
-            transform.Translate(new Vector3(0, 0, speed * Mathf.Sign(Input.GetAxis("Horizontal"))) * Time.deltaTime);
+            transform.Translate(new Vector3(speed * Mathf.Sign(Input.GetAxis("Horizontal")), 0, 0) * Time.deltaTime);
         }
         //if (Input.GetButtonDown("Vertical") && ( -2 < rigidbody.position.z + Mathf.Sign(Input.GetAxis("Vertical")))  && ( 2 > rigidbody.position.z + Mathf.Sign(Input.GetAxis("Vertical"))))
         //{
@@ -38,7 +39,7 @@ public class player_manager : MonoBehaviour {
        // }
         if(Input.GetButtonDown("Vertical"))
         {
-            if(Mathf.Sign(Input.GetAxis("Vertical"))==-1 & !(Physics.Raycast(previous_pos, new Vector3(1,0,0),1)))
+            if(Mathf.Sign(Input.GetAxis("Vertical"))==-1 & !(Physics.Raycast(previous_pos, new Vector3(0,0,1),1)))
             {
                 if(current_pos==middle_lane)
                 {
@@ -49,7 +50,7 @@ public class player_manager : MonoBehaviour {
                     current_pos = middle_lane;
                 }
             }
-            else if (Mathf.Sign(Input.GetAxis("Vertical"))==1 & !(Physics.Raycast(previous_pos, new Vector3(-1,0,0),1)))
+            else if (Mathf.Sign(Input.GetAxis("Vertical"))==1 & !(Physics.Raycast(previous_pos, new Vector3(0,0,-1),1)))
             {
                 if(current_pos == right_lane)
                 {
@@ -62,10 +63,10 @@ public class player_manager : MonoBehaviour {
             }
            // transform.position = new Vector3(current_pos, transform.position.y, transform.position.z);
         }
-        
 
 
-        rigidbody.position = new Vector3(Mathf.Lerp(previous_pos.x, current_pos, speed*Time.deltaTime),transform.position.y,transform.position.z);
+
+        rigidbody.position = new Vector3(transform.position.x, transform.position.y, Mathf.Lerp(speed * Time.deltaTime, current_pos, previous_pos.z));
 
         previous_pos = rigidbody.position;
 	}
