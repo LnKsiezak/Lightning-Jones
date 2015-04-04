@@ -2,6 +2,7 @@
 var pauseCanvas : Canvas;
 
 function Start () {
+    Time.timeScale = 1;
     Screen.lockCursor = true;
     Screen.showCursor = false;
     Time.timeScale = 1;

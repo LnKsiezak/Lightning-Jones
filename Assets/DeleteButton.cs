@@ -4,7 +4,7 @@ using System.Collections;
 public class DeleteButton : MonoBehaviour
 {
 
-    bool enable = true;
+    bool enable = false;
     Rect button1 = new Rect(250, 150, 150, 70);
 
 
